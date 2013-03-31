@@ -9,8 +9,6 @@ use constant $OBJECT_TYPE_UNKNOWN       => 0;
 use constant $OBJECT_TYPE_MEMBERS       => 1;
 use constant $OBJECT_TYPE_INHERIT       => 2;
 use constant $OBJECT_TYPE_OBJECT        => 3;
-use constant $OBJECT_TYPE_INHERIT_DONE  => 4;
-use constant $OBJECT_TYPE_OBJECT_DONE   => 5;
 
 sub CreateNewObject
 {

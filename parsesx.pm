@@ -15,13 +15,15 @@ sub ParseSX
     my $WordList;
     my $SyntacticResult;
     
+    my $CurrLineNum = 0;
     open $FileHandle,$File;
 	while(<$FileHandle>)
 	{
+        $CurrLineNum ++;
 		$LineTextRef = \$_;
         if(FocusText($LineTextRef))
         {
-    		LexicalAnalyzerPushLine($LexicalAnalyzer, $LineTextRef); # simple lexical analyzer
+    		LexicalAnalyzerPushLine($LexicalAnalyzer, $LineTextRef, $CurrLineNum); # simple lexical analyzer
 	    }
 	}
 	
